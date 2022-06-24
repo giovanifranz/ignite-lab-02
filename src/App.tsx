@@ -1,4 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
+import { Event } from "./Pages/Event";
 
 const GET_LESSONS_QUERY = gql`
   query {
@@ -15,8 +16,8 @@ const GET_LESSONS_QUERY = gql`
 
 function App() {
   const { data } = useQuery(GET_LESSONS_QUERY);
-  console.log(data);
-  return <h1>Hello World</h1>;
+
+  return <Event />;
 }
 
 export default App;
